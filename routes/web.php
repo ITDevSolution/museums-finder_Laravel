@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function(){
-    return "Bienvenido al home";
-});
-
 Route::get('/museums', 'MuseumsController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
