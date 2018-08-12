@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/museums', 'MuseumsController@index');
+//Route::get('/museums', 'MuseumsController@index');
 
 Auth::routes();
 
@@ -25,3 +25,6 @@ Route::get('/users', 'UsersController@index');
 
 Route::get('/users/{user}', 'UsersController@show');
 Route::get('/users2/{user}', 'UsersController@show2');
+
+//Creando la nueva ruta con methodo Resource para que nos genere varios tipos de methodos get/post/put/etc
+Route::resource('/museums', 'MuseumsController');
