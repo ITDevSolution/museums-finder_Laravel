@@ -23,7 +23,7 @@ class MuseumsController extends Controller
      */
     public function create()
     {
-        //
+        return view("museums.create");
     }
 
     /**
