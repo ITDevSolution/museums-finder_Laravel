@@ -20,3 +20,8 @@ Route::get('/museums', 'MuseumsController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/users', 'UsersController@index');
+
+Route::get('/users/{user}', 'UsersController@show');
+Route::get('/users2/{user}', 'UsersController@show2');
