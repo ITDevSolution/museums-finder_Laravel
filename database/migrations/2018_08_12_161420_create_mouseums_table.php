@@ -15,6 +15,13 @@ class CreateMouseumsTable extends Migration
     {
         Schema::create('museums', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->text('description');
+            $table->string('image')->nullable();
+            $table->string('thumbnail')->nullable();
+            $table->string('address');
+            $table->string('hours');
+            $table->decimal('rating')->nullable();
             $table->timestamps();
         });
     }
